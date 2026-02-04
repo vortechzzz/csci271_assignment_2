@@ -138,12 +138,24 @@ class Fraction
 
         public Fraction multiply(Fraction inFraction)
         {
-                //logic goes here
-        }
+                //multiplying the fractions occurs as follows:
+		// a/b * c/d = (a*c) / (b*d)
+		long newNumerator = this.getNumerator() * inFraction.getNumerator();
+
+		long newDenominator = this.getDenominator() * inFraction.getDenominator();
+
+		return new Fraction(newNumerator, newDenominator);
+	}
 
         public Fraction divide(Fraction inFraction)
         {
-                //logic goes here
+		//dividing the fractions occurs as follows:
+		// (a/b) / (c/d) = (a*d) / (b*c)
+		long newNumerator = this.getNumerator * inFraction.getDenominator();
+
+		long newDenominator = this.getDenominator() * inFraction.getNumerator();
+
+		return new Fraction(newNumerator, newDenominator);
         }
 
 	public Fraction pow(int n)
@@ -153,7 +165,7 @@ class Fraction
 
         public Fraction negate()
         {
-                //logic goes here
+		return new Fraction(-this.getNumerator(), this.getDenominator());
         }
 
 
