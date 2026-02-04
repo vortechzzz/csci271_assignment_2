@@ -36,7 +36,42 @@ class Fraction
 
 	public Fraction(long num, long denom)
 	{
-		//constructor logic goes here
+		//Handles 0/0 (NaN (not a number))
+		if(num == 0 && denom == 0)
+		{
+			numerator = 0;
+			denominator = 0;
+			return;
+		}
+
+		//Handles n/0 (Infinity or -Infinity)
+		if (denom == 0)
+		{
+			//Keeps the sign on the numerator, which is set to 1 or -1
+			numerator = (num > 0) ? 1 : -1;
+			denominator = 0;
+			return;
+		}
+
+		//Handles 0/n (zero)
+		if (num == 0)
+		{
+			numerator = 0;
+			denominator = 1;
+			return;
+		}
+
+		//Normalizes the sign, if denom is - then flip both
+		if (denom < 0)
+		{
+			num = -num;
+			denom = -denom;
+		}
+
+		//Finds the GCD and reduces the fraction
+		long divisor = gcd(num, denom);
+		numerator = num / divisor;
+		denominator = denom / divisor;
 	}
 
 	public Fraction(long num)
@@ -65,7 +100,6 @@ class Fraction
 		}
 
 		return a;
-	}
 	}
 
 	public long getNumerator()
