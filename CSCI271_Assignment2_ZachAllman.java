@@ -104,12 +104,12 @@ class Fraction
 
 	public long getNumerator()
         {
-                //logic goes here
+                return numerator;
         }
 
         public long getDenominator()
         {
-                //logic goes here
+                return denominator;
         }
 
         public Fraction add(Fraction inFraction)
@@ -141,11 +141,44 @@ class Fraction
         {
                 //logic goes here
         }
-}
 
-public String toString()
-{
 
+	public String toString()
+	{
+		String output = "";
+
+		//Handles 0/0 (NaN)
+		if (getNumerator() == 0 && getDenominator() == 0)
+		{
+			output = "NaN";
+		}
+
+		//Handles positive num/0 (Infinity)
+		else if (getDenominator() == 0 && getNumerator() > 0)
+		{
+			output = "Infinity";
+		}
+
+		//Handles negative num/0 (Negative infinity)
+		else if (getDenominator() == 0 && getNumerator() < 0)
+		{
+			output = "-Infinity";
+		}
+
+		//If denom is 1, return num
+		else if (getDenominator() == 1)
+		{
+			output = String.valueOf(getNumerator());
+		}
+
+		//Return num/denom
+		else
+		{
+			output = getNumerator() + "/" + getDenominator();
+		}
+
+		return output;
+	}
 }
 
 public class CSCI271_Assignment2_ZachAllman
