@@ -28,79 +28,102 @@
 * Zach Allman
 ********************************************************************/
 
-import java.util.Scanner;
+
+class Fraction
+{
+	private long numerator;
+	private long denominator;
+
+	public Fraction(long num, long denom)
+	{
+		//constructor logic goes here
+	}
+
+	public Fraction(long num)
+        {
+                numerator = num;
+                denominator = 1;
+        }
+
+	private static long gcd(long a, long b)
+	{
+		if(a < 0)
+		{
+			a = -a;
+		}
+
+		while (b != 0)
+		{
+			long remainder = a % b;
+			a = b;
+			b = remainder;
+		}
+
+		if(a == 0)
+		{
+			a = 1;
+		}
+
+		return a;
+	}
+	}
+
+	public long getNumerator()
+        {
+                //logic goes here
+        }
+
+        public long getDenominator()
+        {
+                //logic goes here
+        }
+
+        public Fraction add(Fraction inFraction)
+        {
+                //logic goes here
+        }
+
+        public Fraction subtract(Fraction inFraction)
+        {
+                //logic goes here
+        }
+
+        public Fraction multiply(Fraction inFraction)
+        {
+                //logic goes here
+        }
+
+        public Fraction divide(Fraction inFraction)
+        {
+                //logic goes here
+        }
+
+	public Fraction pow(int n)
+        {
+                //logic goes here
+        }
+
+        public Fraction negate()
+        {
+                //logic goes here
+        }
+}
+
+public String toString()
+{
+
+}
 
 public class CSCI271_Assignment2_ZachAllman
 {
 
-	public class Fraction
-	{
-		private long numerator;
-		private long denominator;
-	}
-
-	public Fraction(long num, long denom)
-	{
-		//constructor logic will go here
-	}
-
-	public Fraction(long num)
-	{
-		numerator = num;
-		denominator = 1;
-	}
-
-	public long getNumerator()
-	{
-		//logic goes here
-	}
-
-	public long getDenominator()
-	{
-		//logic goes here
-	}
-
-	public Fraction add(Fraction inFraction)
-	{
-		//logic goes here
-	}
-
-	public Fraction subtract(Fraction inFraction)
-	{
-		//logic goes here
-	}
-
-	public Fraction multiply(Fraction inFraction)
-	{
-		//logic goes here
-	}
-
-	public Fraction divide(Fraction inFraction)
-	{
-		//logic goes here
-	}
-
-	public Fraction pow(int n)
-	{
-		//logic goes here
-	}
-
-	public Fraction negate()
-	{
-		//logic goes here
-	}
-
-	public string toString()
-	{
-		//print logic will go here
-	}
 	public static void main (String[] args) //Main function
 	{
 
 	}
-
-
 }
+
+
 
 
 
