@@ -114,12 +114,26 @@ class Fraction
 
         public Fraction add(Fraction inFraction)
         {
-                //logic goes here
+                //adding the fractions occurs as follows:
+		// a/b + c/d = (a*d + c*b) / (b*d)
+		long newNumerator = this.getNumerator() * inFraction.getDenominator()
+				  + inFraction.getNumerator() * this.getDenominator();
+
+		long newDenominator = this.getDenominator() * inFraction.getDenominator();
+
+		return new Fraction(newNumerator, newDenominator);
         }
 
         public Fraction subtract(Fraction inFraction)
         {
-                //logic goes here
+                //subtracting the fractions occurs as follows:
+		// a/b - c/d = (a*d - c*b) / (b*d)
+		long newNumerator = this.getNumerator() * inFraction.getDenominator()
+				  - inFraction.getNumerator() * this.getDenominator();
+
+		long newDenominator = this.getDenominator() * inFraction.getDenominator();
+
+		return new Fraction(newNumerator, newDenominator);
         }
 
         public Fraction multiply(Fraction inFraction)
