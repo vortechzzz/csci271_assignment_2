@@ -251,11 +251,20 @@ public class CSCI271_Assignment2_ZachAllman
 		//Task 1:
 		System.out.println("Task 1: ");
 
-		//Test case: Zero as the numerator
+		//Test Case: Zero as the numerator
 		System.out.println("new Fraction(0, 8) = " + new Fraction(0, 8));
 
 		//Test Case: Verify GCD (greatest common denominator) works correctly
 		System.out.println("new Fraction(9, 12) = " + new Fraction(9, 12));
+
+		//Test Case: Negative denominator + GCD
+		System.out.println("new Fraction(6, -24) = " + new Fraction(6, -24));
+
+		//Test Case: Whole number
+		System.out.println("new Fraction(67) = " + new Fraction(67));
+
+		//Test Case: Negative Whole number
+		System.out.println("new Fraction(-67) = " + new Fraction(-67));
 
 		//Task 2:
 
