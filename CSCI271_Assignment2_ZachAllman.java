@@ -1,5 +1,5 @@
 /*************************************************************************
-* Assignment 1 for CSCI 271-001 Spring 2026
+* Assignment 2 for CSCI 271-001 Spring 2026
 *
 * Author: Zach Allman
 * OS: Ubuntu 24.04.3 LTS
@@ -160,8 +160,43 @@ class Fraction
 
 	public Fraction pow(int n)
         {
-                //logic goes here
-        }
+		Fraction base;
+		int exponent;
+
+		//This case handles 0/0 (NaN), which raised to any power is (NaN)
+                if(this.getNumerator() == 0 && this.getDenominator == 0)
+		{
+			return new Fraction(0, 0);
+		}
+
+		//Handles if any number to power of 0 is 1
+		if(n == 0)
+		{
+			return new Fraction(1, 1);
+		}
+
+		//Handles if the exponent is negative, the fraction gets inverted
+		if(n < 0)
+		{
+			base = new Fraction(this.getDenominator(), this.getNumerator());
+			exponent = -n;
+		}
+
+		else
+		{
+			base = new Fraction(this.getNumerator(), this.getDenominator());
+			exponent = n;
+		}
+
+		//Figures out the power by repeated multiplication
+		Fraction result = new Fraction(1, 1);
+		for (int i = 0; i < exponent; i++)
+		{
+			result = result.multiply(base);
+		}
+
+		return result;
+	}
 
         public Fraction negate()
         {
