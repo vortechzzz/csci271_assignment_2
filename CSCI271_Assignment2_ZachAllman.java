@@ -252,21 +252,45 @@ public class CSCI271_Assignment2_ZachAllman
 		System.out.println("Task 1: ");
 
 		//Test Case: Zero as the numerator
-		System.out.println("new Fraction(0, 8) = " + new Fraction(0, 8));
+		System.out.println("new Fraction(0, 8) = " + new Fraction(0, 8)); //answer: 0
 
 		//Test Case: Verify GCD (greatest common denominator) works correctly
-		System.out.println("new Fraction(9, 12) = " + new Fraction(9, 12));
+		System.out.println("new Fraction(9, 12) = " + new Fraction(9, 12)); //answer: 3/4
 
 		//Test Case: Negative denominator + GCD
-		System.out.println("new Fraction(6, -24) = " + new Fraction(6, -24));
+		System.out.println("new Fraction(6, -24) = " + new Fraction(6, -24)); //answer: -1/4
 
 		//Test Case: Whole number
-		System.out.println("new Fraction(67) = " + new Fraction(67));
+		System.out.println("new Fraction(67) = " + new Fraction(67)); //answer: 67
 
 		//Test Case: Negative Whole number
-		System.out.println("new Fraction(-67) = " + new Fraction(-67));
+		System.out.println("new Fraction(-67) = " + new Fraction(-67)); //answer: -67
+
+		//extra space
+		System.out.println("***************");
+
 
 		//Task 2:
+		System.out.println("Task 2:");
+
+		//Test Case: Fraction with a negative
+		System.out.println("new Fraction(8, -6) = " + new Fraction(8, -6)); //answer: -4/3
+
+		//Test Case: Infinity
+		System.out.println("new Fraction(23, 0) = " + new Fraction(23, 0)); //answer: Infinity
+
+		//Test Case: Negative Infinity
+		System.out.println("new Fraction(-6, 0) = " + new Fraction(-6, 0)); //answer: -Infinity
+
+		//Test Case: Whole number
+		System.out.println("new Fraction(7, 1) = " + new Fraction(7, 1)); //answer: 7
+
+		//Test Case: Negative Whole number
+		System.out.println("new Fraction(-7, 1) = " + new Fraction(-7, 1)); //answer: -7
+
+		//Test Case: NaN (not a number)
+		System.out.println("new Fraction(0, 0) = " + new Fraction(0, 0)); //answer: NaN
+
 
 		//Task 3:
 	}
