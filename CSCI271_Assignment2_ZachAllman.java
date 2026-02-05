@@ -151,7 +151,7 @@ class Fraction
         {
 		//dividing the fractions occurs as follows:
 		// (a/b) / (c/d) = (a*d) / (b*c)
-		long newNumerator = this.getNumerator * inFraction.getDenominator();
+		long newNumerator = this.getNumerator() * inFraction.getDenominator();
 
 		long newDenominator = this.getDenominator() * inFraction.getNumerator();
 
@@ -164,7 +164,7 @@ class Fraction
 		int exponent;
 
 		//This case handles 0/0 (NaN), which raised to any power is (NaN)
-                if(this.getNumerator() == 0 && this.getDenominator == 0)
+                if(this.getNumerator() == 0 && this.getDenominator() == 0)
 		{
 			return new Fraction(0, 0);
 		}
@@ -248,6 +248,18 @@ public class CSCI271_Assignment2_ZachAllman
 	public static void main (String[] args) //Main function
 	{
 
+		//Task 1:
+		System.out.println("Task 1: ");
+
+		//Test case: Zero as the numerator
+		System.out.println("new Fraction(0, 8) = " + new Fraction(0, 8));
+
+		//Test Case: Verify GCD (greatest common denominator) works correctly
+		System.out.println("new Fraction(9, 12) = " + new Fraction(9, 12));
+
+		//Task 2:
+
+		//Task 3:
 	}
 }
 
