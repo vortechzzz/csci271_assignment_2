@@ -7,7 +7,9 @@
 * Date: February 6 2026
 *
 * Purpose
-* This program...
+* This program implements a Fraction data structure that gives exact calculations by storing values as fractions
+* instead of floating-point numbers. The Fraction class has addition, subtraction, multiplication, division, negation
+* and exponentation while keeping the fractions in normalized and reduced form.
 *
 *************************************************************************/
 /*************************************************************************
@@ -33,6 +35,26 @@ class Fraction
 {
 	private long numerator;
 	private long denominator;
+
+/****************************Fraction(long, long)***********************
+* Description: Constructor that creates a new Fraction from a numerator
+*              and denominator, and automatically reduces it to the lowest terms
+*              and normalizes the sign
+*
+* Parameters: num: the numerator of the fraction
+*             denom: the denominator of the fraction
+*
+* Pre: None
+*
+* Post: A new Fraction object is created in reduced, normalized form
+*       where the denominator is non-negative and the fraction is
+*       reduced by their GCD
+*
+* Returns: N/A
+*
+* Called by: main, add, subtract, multiply, divide, pow, negate
+* Calls: gcd
+*******************************************************************/
 
 	public Fraction(long num, long denom)
 	{
@@ -74,11 +96,46 @@ class Fraction
 		denominator = denom / divisor;
 	}
 
+/****************************Fraction(long)****************************
+* Description: Constructor that creates a new Fraction from a whole
+*              number (denominator defaults to 1)
+*
+* Parameters: num: the whole number value
+*
+* Pre: None
+*
+* Post: A new Fraction object is created with the given numerator
+*       and denominator of 1
+*
+* Returns: N/A
+*
+* Called by: main
+* Calls: None
+*******************************************************************/
+
 	public Fraction(long num)
         {
                 numerator = num;
                 denominator = 1;
         }
+
+/****************************gcd****************************************
+* Description: Calculates the greatest common divisor of two numbers
+*              using Euclid's algorithm
+*
+* Parameters: a: first number
+*             b: second number
+*
+* Pre: None (handles negative numbers and zero)
+*
+* Post: Returns the GCD of the absolute values of a and b
+*       Returns 1 if both inputs are 0
+*
+* Returns: long: the greatest common divisor
+*
+* Called by: Fraction(long, long)
+* Calls: None
+*******************************************************************/
 
 	private static long gcd(long a, long b)
 	{
