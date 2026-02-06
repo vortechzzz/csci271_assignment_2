@@ -269,9 +269,11 @@ public class CSCI271_Assignment2_ZachAllman
 		//extra space
 		System.out.println("***************");
 
-
 		//Task 2:
 		System.out.println("Task 2:");
+
+		//extra space
+                System.out.println("***************");
 
 		//Test Case: Fraction with a negative
 		System.out.println("new Fraction(8, -6) = " + new Fraction(8, -6)); //answer: -4/3
@@ -291,9 +293,17 @@ public class CSCI271_Assignment2_ZachAllman
 		//Test Case: NaN (not a number)
 		System.out.println("new Fraction(0, 0) = " + new Fraction(0, 0)); //answer: NaN
 
+		//extra space
+		System.out.println("***************");
 
 		//Task 3:
 		System.out.println("Task 3: ");
+
+ 		//extra space
+                System.out.println("***************");
+
+		//Adding
+		System.out.println("Add cases: ");
 
 		//Adding test case: Adding 2 regular fractions together
 		System.out.println("2/3 + 6/7 = " + new Fraction(2, 3).add(new Fraction(6, 7))); //answer: 32/21
@@ -303,6 +313,22 @@ public class CSCI271_Assignment2_ZachAllman
 
 		//Adding test case: Adding 2 improper fractions
 		System.out.println("9/5 + 8/3 = " + new Fraction(9, 5).add(new Fraction(8, 3))); //answer: 67/15
+
+		//extra space
+                System.out.println("***************");
+
+		//Subtracting
+		System.out.println("Subtracting test cases: ");
+
+		//Subtracting test case: Subtracting 2 regular fractions
+		System.out.println("3/4 - 1/4 = " + new Fraction(3, 4).subtract(new Fraction(1, 4))); //answer: 1/2
+
+		//Subtracting test case: Subtracting a regular fraction and whole number
+		System.out.println("1/4 - 7 = " + new Fraction(1, 4).subtract(new Fraction(7))); //answer: -27/4
+
+		//Subtracting test case: Subtracting 2 improper fractions
+		System.out.println("9/5 - 8/3 = " + new Fraction(9, 5).subtract(new Fraction(8, 3))); //answer: -13/15
+
 	}
 }
 
