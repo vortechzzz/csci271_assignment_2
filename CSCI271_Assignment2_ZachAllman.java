@@ -386,6 +386,18 @@ public class CSCI271_Assignment2_ZachAllman
 		//Pow
 		System.out.println("Pow test cases: ");
 
+		//Pow test case: A regular fraction to the power of a positive number (in this case 3)
+		System.out.println("(6/7)^3 = " + new Fraction(6, 7).pow(3)); //answer: 216/343
+
+		//Pow test case: A regular fraction to the power of 0
+		System.out.println("(5/9)^0 = " + new Fraction(5, 9).pow(0)); //answer: 1
+
+		//Pow test case: A regular fraction to the power of a negative number (in this case -4)
+		System.out.println("(2/3)^(-4) = " + new Fraction(2, 3).pow(-4)); //answer: 81/16
+
+		//extra space
+                System.out.println("***************");
+
 	}
 }
 
