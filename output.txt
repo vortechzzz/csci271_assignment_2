@@ -1,0 +1,59 @@
+Script started on 2026-02-06 01:03:43-05:00 [TERM="xterm-256color" TTY="/dev/pts/21" COLUMNS="120" LINES="28"]
+[?2004h]0;allmanz2@thur114-hp1: ~/csci271/csci271_assignment_2[01;32mallmanz2@thur114-hp1[00m:[01;34m~/csci271/csci271_assignment_2[00m$ java CSCI271_Assignment2_ZachAllman 
+[?2004lTask 1: 
+***************
+new Fraction(0, 8) = 0
+new Fraction(9, 12) = 3/4
+new Fraction(6, -24) = -1/4
+new Fraction(67) = 67
+new Fraction(-67) = -67
+***************
+Task 2:
+***************
+new Fraction(8, -6) = -4/3
+new Fraction(23, 0) = Infinity
+new Fraction(-6, 0) = -Infinity
+new Fraction(7, 1) = 7
+new Fraction(-7, 1) = -7
+new Fraction(0, 0) = NaN
+***************
+Task 3: 
+***************
+Add test cases: 
+2/3 + 6/7 = 32/21
+4/5 + 10 = 54/5
+9/5 + 8/3 = 67/15
+***************
+Subtracting test cases: 
+3/4 - 1/4 = 1/2
+1/4 - 7 = -27/4
+9/5 - 8/3 = -13/15
+***************
+Multiplying test cases: 
+2/3 * 3/4 = 1/2
+-3/7 * 9/8 = -27/56
+1/2 * 25 = 25/2
+***************
+Dividing test cases: 
+(2/4) / (5/15) = 3/2
+(5/3) / 0 = Infinity
+(9/5) / (-8/3) = -27/40
+***************
+Negation test cases: 
+negate(1/2) = -1/2
+negate(-1/2) = 1/2
+negate(Infinity) = -Infinity
+negate(0/0) = NaN
+***************
+Pow test cases: 
+(6/7)^3 = 216/343
+(5/9)^0 = 1
+(2/3)^(-4) = 81/16
+***************
+Sample code calculation: 
+Calculating: (16 / (3/5 + 7)) * (6/7)) 
+Answer = 240/133
+[?2004h]0;allmanz2@thur114-hp1: ~/csci271/csci271_assignment_2[01;32mallmanz2@thur114-hp1[00m:[01;34m~/csci271/csci271_assignment_2[00m$ exit
+[?2004lexit
+
+Script done on 2026-02-06 01:04:00-05:00 [COMMAND_EXIT_CODE="0"]
