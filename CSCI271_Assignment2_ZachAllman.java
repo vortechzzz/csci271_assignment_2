@@ -293,6 +293,16 @@ public class CSCI271_Assignment2_ZachAllman
 
 
 		//Task 3:
+		System.out.println("Task 3: ");
+
+		//Adding test case: Adding 2 regular fractions together
+		System.out.println("2/3 + 6/7 = " + new Fraction(2, 3).add(new Fraction(6, 7))); //answer: 32/21
+
+		//Adding test case: Adding a regular fraction and whole number
+		System.out.println("4/5 + 10 = " + new Fraction(4, 5).add(new Fraction(10))); //answer: 54/5
+
+		//Adding test case: Adding 2 improper fractions
+		System.out.println("9/5 + 8/3 = " + new Fraction(9, 5).add(new Fraction(8, 3))); //answer: 67/15
 	}
 }
 
