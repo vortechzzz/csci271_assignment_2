@@ -350,6 +350,27 @@ public class CSCI271_Assignment2_ZachAllman
 		//extra space
                 System.out.println("***************");
 
+		//Dividing
+		System.out.println("Dividing test cases: ");
+
+		//Dividing test case: Dividing two regular fractions
+		System.out.println("(2/4) / (5/15) = " + new Fraction(2, 4).divide(new Fraction(5, 15))); //answer: 3/2
+
+		//Dividing test case: Dividing a fraction by zero
+		System.out.println("(5/3) / 0 = " + new Fraction(5, 3).divide(new Fraction(0))); //answer: Infinity
+
+		//Dividing test case: Dividing two improper fractions, one positive and one negative fraction
+		System.out.println("(9/5) / (-8/3) = " + new Fraction(9, 5).divide(new Fraction(-8, 3))); //answer: -27/40
+
+		//extra space
+                System.out.println("***************");
+
+		//Negation
+		System.out.println("Negation test cases: ");
+
+		//Negation test case: Negating a regular positive fraction
+
+
 	}
 }
 
