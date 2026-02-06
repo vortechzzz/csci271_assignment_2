@@ -260,6 +260,24 @@ class Fraction
 		return new Fraction(newNumerator, newDenominator);
         }
 
+/****************************multiply**********************************
+* Description: Multiplies this fraction by another fraction and
+*              returns a new fraction which represents the product
+*              Formula: a/b * c/d = (a*c) / (b*d)
+*
+* Parameters: inFraction: the fraction to multiply with this fraction
+*
+* Pre: inFraction must be a valid Fraction object
+*
+* Post: Returns a new Fraction representing the product
+*       Neither this fraction nor inFraction is modified
+*
+* Returns: Fraction: a new fraction representing this * inFraction
+*
+* Called by: main, pow
+* Calls: Fraction(long, long), getNumerator, getDenominator
+*******************************************************************/
+
         public Fraction multiply(Fraction inFraction)
         {
                 //multiplying the fractions occurs as follows:
@@ -271,6 +289,25 @@ class Fraction
 		return new Fraction(newNumerator, newDenominator);
 	}
 
+/****************************divide************************************
+* Description: Divides this fraction by another fraction and
+*              returns a new fraction which represents the quotient
+*              Formula: (a/b) / (c/d) = (a*d) / (b*c)
+*
+* Parameters: inFraction: the fraction to divide this fraction by
+*
+* Pre: inFraction must be a valid Fraction object
+*
+* Post: Returns a new Fraction representing the quotient
+*       Neither this fraction nor inFraction is modified
+*       Division by zero results in Infinity, -Infinity, or NaN
+*
+* Returns: Fraction: a new fraction representing this / inFraction
+*
+* Called by: main
+* Calls: Fraction(long, long), getNumerator, getDenominator
+*******************************************************************/
+
         public Fraction divide(Fraction inFraction)
         {
 		//dividing the fractions occurs as follows:
@@ -281,6 +318,26 @@ class Fraction
 
 		return new Fraction(newNumerator, newDenominator);
         }
+
+/****************************pow****************************************
+* Description: Returns a new fraction that is this fraction raised
+*              to the power n. Handles positive, negative, and zero
+*              exponents.
+*
+* Parameters: n: the integer exponent (can be +, - or 0)
+*
+* Pre: Fraction object must be initialized
+*
+* Post: Returns a new Fraction representing this^n
+*       This fraction is not modified
+*       x^0 = 1 for any x (except 0/0 which remains NaN)
+*       x^(-n) = (1/x)^n
+*
+* Returns: Fraction: a new fraction representing this^n
+*
+* Called by: main
+* Calls: Fraction(long, long), multiply, getNumerator, getDenominator
+*******************************************************************/
 
 	public Fraction pow(int n)
         {
@@ -322,11 +379,47 @@ class Fraction
 		return result;
 	}
 
+/****************************negate************************************
+* Description: Returns a new fraction that is the negation of this
+*              fraction (multiplied by -1)
+*
+* Parameters: None
+*
+* Pre: Fraction object must be initialized
+*
+* Post: Returns a new Fraction representing the negation
+*       This fraction is not modified
+*       Negate of Infinity is -Infinity, negate of NaN is NaN
+*
+* Returns: Fraction: a new fraction representing -this
+*
+* Called by: main
+* Calls: Fraction(long, long), getNumerator, getDenominator
+*******************************************************************/
+
         public Fraction negate()
         {
 		return new Fraction(-this.getNumerator(), this.getDenominator());
         }
 
+
+/****************************toString**********************************
+* Description: Returns a string representation of this fraction
+*              Format: "numerator/denominator" or just "numerator"
+*              if denominator is 1. Returns "Infinity", "-Infinity",
+*              or "NaN" for special cases.
+*
+* Parameters: None
+*
+* Pre: Fraction object must be initialized
+*
+* Post: Returns a String representation with no spaces
+*
+* Returns: String: the string representation of this fraction
+*
+* Called by: main, System.out.println
+* Calls: getNumerator, getDenominator
+*******************************************************************/
 
 	public String toString()
 	{
@@ -368,6 +461,24 @@ class Fraction
 
 public class CSCI271_Assignment2_ZachAllman
 {
+
+/****************************main**************************************
+* Description: Main function that tests all features of the Fraction
+*              class including constructors, mathematical operations,
+*              and special cases (Infinity, -Infinity, NaN)
+*
+* Parameters: args: command line arguments
+*
+* Pre: None
+*
+* Post: Test results are printed to console which demonstrates that
+*       all Fraction methods work correctly
+*
+* Returns: void
+*
+* Called by: JVM
+* Calls: Fraction constructors and methods
+*******************************************************************/
 
 	public static void main (String[] args) //Main function
 	{
