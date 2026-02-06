@@ -369,7 +369,22 @@ public class CSCI271_Assignment2_ZachAllman
 		System.out.println("Negation test cases: ");
 
 		//Negation test case: Negating a regular positive fraction
+		System.out.println("negate(1/2) = " + new Fraction(1, 2).negate()); //answer: -1/2
 
+		//Negation test case: Negating a negative regular fraction
+		System.out.println("negate(-1/2) = " + new Fraction(-1, 2).negate()); //answer: 1/2
+
+		//Negation test case: Negating infinity
+		System.out.println("negate(Infinity) = " + new Fraction(1, 0).negate()); //answer: -Infinity
+
+		//Negation test case: Negating NaN
+		System.out.println("negate(0/0) = " + new Fraction(0, 0).negate()); //answer: NaN
+
+		//extra space
+                System.out.println("***************");
+
+		//Pow
+		System.out.println("Pow test cases: ");
 
 	}
 }
