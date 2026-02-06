@@ -159,15 +159,64 @@ class Fraction
 		return a;
 	}
 
+
+/****************************getNumerator******************************
+* Description: Getter method that extracts the numerator of this fraction
+*
+* Parameters: None
+*
+* Pre: Fraction object must be initialized
+*
+* Post: None
+*
+* Returns: long: the numerator value
+*
+* Called by: add, subtract, multiply, divide, pow, negate, external code
+* Calls: None
+*******************************************************************/
+
 	public long getNumerator()
         {
                 return numerator;
         }
 
+/****************************getDenominator****************************
+* Description: Getter method that extracts the denominator of this fraction
+*
+* Parameters: None
+*
+* Pre: Fraction object must be initialized
+*
+* Post: None
+*
+* Returns: long: the denominator value
+*
+* Called by: add, subtract, multiply, divide, pow, negate, external code
+* Calls: None
+*******************************************************************/
+
         public long getDenominator()
         {
                 return denominator;
         }
+
+/****************************add****************************************
+* Description: Adds this fraction to another fraction and returns
+*              a new fraction which represents the sum
+*              Formula: a/b + c/d = (a*d + c*b) / (b*d)
+*
+* Parameters: inFraction: the fraction to add to this fraction
+*
+* Pre: inFraction must be a valid Fraction object
+*
+* Post: Returns a new Fraction representing the sum
+*       Neither this fraction nor inFraction is modified
+*
+* Returns: Fraction: a new fraction representing this + inFraction
+*
+* Called by: main
+* Calls: Fraction(long, long), getNumerator, getDenominator
+*******************************************************************/
 
         public Fraction add(Fraction inFraction)
         {
@@ -180,6 +229,24 @@ class Fraction
 
 		return new Fraction(newNumerator, newDenominator);
         }
+
+/****************************subtract**********************************
+* Description: Subtracts another fraction from this fraction and
+*              returns a new fraction which represents the difference
+*              Formula: a/b - c/d = (a*d - c*b) / (b*d)
+*
+* Parameters: inFraction: the fraction to subtract from this fraction
+*
+* Pre: inFraction must be a valid Fraction object
+*
+* Post: Returns a new Fraction representing the difference
+*       Neither this fraction nor inFraction is modified
+*
+* Returns: Fraction" a new fraction representing this - inFraction
+*
+* Called by: main
+* Calls: Fraction(long, long), getNumerator, getDenominator
+*******************************************************************/
 
         public Fraction subtract(Fraction inFraction)
         {
