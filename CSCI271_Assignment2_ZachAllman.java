@@ -398,6 +398,17 @@ public class CSCI271_Assignment2_ZachAllman
 		//extra space
                 System.out.println("***************");
 
+		//Sample code calculation
+		//(16 / (3/5 + 7)) * (6/7))
+		System.out.println("Sample code calculation: ");
+		System.out.println("Calculating: (16 / (3/5 + 7)) * (6/7)) ");
+
+		Fraction a = new Fraction(16);
+		Fraction b = new Fraction(3, 5).add(new Fraction(7));
+		Fraction c = new Fraction(6, 7);
+		Fraction answer = c.multiply(a.divide(b));
+
+		System.out.println("Answer = " + answer); //answer: 240/133
 	}
 }
 
