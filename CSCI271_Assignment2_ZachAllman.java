@@ -251,6 +251,9 @@ public class CSCI271_Assignment2_ZachAllman
 		//Task 1:
 		System.out.println("Task 1: ");
 
+		//extra space
+                System.out.println("***************");
+
 		//Test Case: Zero as the numerator
 		System.out.println("new Fraction(0, 8) = " + new Fraction(0, 8)); //answer: 0
 
@@ -303,7 +306,7 @@ public class CSCI271_Assignment2_ZachAllman
                 System.out.println("***************");
 
 		//Adding
-		System.out.println("Add cases: ");
+		System.out.println("Add test cases: ");
 
 		//Adding test case: Adding 2 regular fractions together
 		System.out.println("2/3 + 6/7 = " + new Fraction(2, 3).add(new Fraction(6, 7))); //answer: 32/21
@@ -328,6 +331,24 @@ public class CSCI271_Assignment2_ZachAllman
 
 		//Subtracting test case: Subtracting 2 improper fractions
 		System.out.println("9/5 - 8/3 = " + new Fraction(9, 5).subtract(new Fraction(8, 3))); //answer: -13/15
+
+		//extra space
+                System.out.println("***************");
+
+		//Multiplying
+		System.out.println("Multiplying test cases: ");
+
+		//Multiplying test case: Multiplying two regular fractions
+		System.out.println("2/3 * 3/4 = " + new Fraction(2, 3).multiply(new Fraction(3, 4))); //answer: 1/2
+
+		//Multiplying test case: Multiplying a negative regular fraction with an improper fraction
+		System.out.println("-3/7 * 9/8 = " + new Fraction(-3, 7).multiply(new Fraction(9, 8))); //answer: -27/56
+
+		//Mutliplying test case: Multiplying a regular fraction and a whole number
+		System.out.println("1/2 * 25 = " + new Fraction(1, 2).multiply(new Fraction(25))); //answer: 25/2
+
+		//extra space
+                System.out.println("***************");
 
 	}
 }
